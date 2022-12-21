@@ -1,1 +1,0 @@
-<h1 class="font-sans text-6xl text-blue-6">welcome to unocss</h1>
