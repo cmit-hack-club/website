@@ -1,0 +1,18 @@
+---
+import Layout from './Layout.astro';
+const {frontmatter} = Astro.props;
+---
+<Layout title={frontmatter.title}>
+<div class="max-w-[60ch] mx-auto content-center">
+    <h1 class="text-4xl text-center font-bold mt-5">{frontmatter.title}</h1>
+    <span class="flex items-center justify-between p-5 mb-5 border-b border-neutral-300">
+        <div class="mx-auto flex">
+            <img src="https://api.lorem.space/image/face?w=24&h=24" class="rounded-full mr-3"/>
+            <p>written by {frontmatter.author}</p>
+        </div>
+    </span>
+    <div class="prose text-lg leading-2">
+        <slot/>
+    </div>
+</div>
+</Layout>
